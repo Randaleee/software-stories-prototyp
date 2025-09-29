@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="App" load_steps=2 format=3 uid="uid://ch6epmtkkio2n"]
+
+[ext_resource type="Script" path="res://Data/Projekte/Apps.gd" id="1_i4w4l"]
+
+[resource]
+script = ExtResource("1_i4w4l")
+plattform = 2
+kategorie = 2
+entwicklungszeit = 3
+app_name = ""
+schwerpunkt = 3
+schwierigkeit = 5
+"gewährte_erfahrung" = 0
+belohnung = 0
+design = 0
+performance = 0
+innovation = 0
+"qualität" = 0
