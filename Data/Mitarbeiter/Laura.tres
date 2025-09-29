@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Mitarbeiter" load_steps=3 format=3 uid="uid://hltvx5gu1h6b"]
+
+[ext_resource type="Script" path="res://Data/Mitarbeiter/Mitarbeiter.gd" id="1_8tqno"]
+[ext_resource type="Texture2D" uid="uid://r17j4m0ngcf3" path="res://icon.svg" id="1_un08k"]
+
+[resource]
+script = ExtResource("1_8tqno")
+mitarbeiter_name = "Laura"
+bild = ExtResource("1_un08k")
+"persönlichkeit" = 1
+level = 4
+erfahrung = 5
+freie_attributpunkte = 0
+sternzeichen = 0
+status = 0
+teamwork = 0
+"führung" = 0
+"kreativität" = 6
+analytik = 0
+akribie = 4
+"loyalität" = 0
