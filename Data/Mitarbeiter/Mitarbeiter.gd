@@ -11,6 +11,7 @@ extends Resource
 @export var freie_attributpunkte: int = 0
 @export var sternzeichen: Sternzeichen # Gibt Bonus in bestimmten Monaten
 @export var status: Status
+@export var gehalt: int
 
 # Fähigkeiten
 @export_group("Attribute")

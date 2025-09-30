@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://ca45pm44s7oaa"]
+[gd_scene load_steps=2 format=3 uid="uid://ca45pm44s7oaa"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_h4bak"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -7,3 +9,40 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_h4bak")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Konto" type="Label" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+text = "Konto:"
+
+[node name="<konto>" type="Label" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+
+[node name="Label" type="Label" parent="CanvasLayer/HBoxContainer2"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="CanvasLayer/HBoxContainer2"]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="CanvasLayer/HBoxContainer2"]
+layout_mode = 2
+
+[node name="Label4" type="Label" parent="CanvasLayer/HBoxContainer2"]
+layout_mode = 2
+
+[node name="Label5" type="Label" parent="CanvasLayer/HBoxContainer2"]
+layout_mode = 2
