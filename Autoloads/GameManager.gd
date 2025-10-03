@@ -20,10 +20,15 @@ signal app_fertiggestellt(app: App)
 signal geld_geändert
 
 func _ready():
-	pass
+	var timer = Timer.new()
+	add_child(timer)
+	timer.wait_time = 2.0
+	timer.timeout.connect(nächster_monat)
+	timer.start()
 
 func nächster_monat():
 	aktuelles_datum.monat += 1
 	if aktuelles_datum.monat > 12:
 		aktuelles_datum.monat = 1
 		aktuelles_datum.jahr += 1
+	monat_vergangen.emit()
