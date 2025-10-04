@@ -2,7 +2,7 @@
 extends Node
 
 # Spielzustand
-var aktuelles_datum: Dictionary = {"monat": 1, "jahr": 2024}
+var aktuelles_datum: Dictionary = {"monat": 0, "jahr": 2024}
 var geld: int = 10000
 
 # Listen
@@ -19,6 +19,9 @@ const MONATE = ["Januar", "Februar", "März", "April", "Mai", "Juni",
 signal monat_vergangen
 signal app_fertiggestellt(app: App)
 signal geld_geändert
+
+signal button_neue_app_pressed
+
 
 func _ready():
 	starte_ingame_zeit()
@@ -38,8 +41,8 @@ func starte_ingame_zeit():
 
 func nächster_monat():
 	aktuelles_datum.monat += 1
-	if aktuelles_datum.monat > 12:
-		aktuelles_datum.monat = 1
+	if aktuelles_datum.monat == 12:
+		aktuelles_datum.monat = 0
 		aktuelles_datum.jahr += 1
 	monat_vergangen.emit()
 	

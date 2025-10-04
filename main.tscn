@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://ca45pm44s7oaa"]
+[gd_scene load_steps=4 format=3 uid="uid://ca45pm44s7oaa"]
 
-[ext_resource type="Script" path="res://main.gd" id="1_h4bak"]
 [ext_resource type="PackedScene" uid="uid://d2n71i24km6bi" path="res://UI/UI Ingame Menü/ingame_menü.tscn" id="2_jjl0w"]
+[ext_resource type="PackedScene" uid="uid://c4fjn15hr4c7v" path="res://UI/HUD/hud.tscn" id="3_gpyb0"]
+[ext_resource type="PackedScene" uid="uid://b203qk1e4s7dn" path="res://UI/UI_App_auswahlmenü/UI_app_auswahlmenü.tscn" id="4_hcqdn"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -10,43 +11,15 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_h4bak")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="HUD" parent="CanvasLayer" instance=ExtResource("3_gpyb0")]
+unique_name_in_owner = true
 
-[node name="Konto" type="Label" parent="CanvasLayer/HBoxContainer"]
-layout_mode = 2
-text = "Konto:"
+[node name="Ingame Menü" parent="CanvasLayer" instance=ExtResource("2_jjl0w")]
+unique_name_in_owner = true
 
-[node name="<konto>" type="Label" parent="CanvasLayer/HBoxContainer"]
-layout_mode = 2
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer"]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -40.0
-offset_bottom = 40.0
-grow_horizontal = 0
-
-[node name="Label" type="Label" parent="CanvasLayer/HBoxContainer2"]
-layout_mode = 2
-
-[node name="Label2" type="Label" parent="CanvasLayer/HBoxContainer2"]
-layout_mode = 2
-
-[node name="Label3" type="Label" parent="CanvasLayer/HBoxContainer2"]
-layout_mode = 2
-
-[node name="Label4" type="Label" parent="CanvasLayer/HBoxContainer2"]
-layout_mode = 2
-
-[node name="Label5" type="Label" parent="CanvasLayer/HBoxContainer2"]
-layout_mode = 2
-
-[node name="Ingame Menü" parent="." instance=ExtResource("2_jjl0w")]
-layout_mode = 1
+[node name="App Auswahlmenü" parent="CanvasLayer" instance=ExtResource("4_hcqdn")]
+unique_name_in_owner = true
+visible = false

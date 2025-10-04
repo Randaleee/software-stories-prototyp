@@ -37,5 +37,3 @@ text = "Optionen"
 [node name="Beenden" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Beenden"
-
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Neue App" to="." method="_on_neue_app_pressed"]

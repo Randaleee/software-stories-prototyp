@@ -14,4 +14,8 @@ func aktualisiere_ui():
 	app_name.text = app_id.app_name
 	app_kategorie.text = str(app_id.kategorie)
 	app_plattform.text = str(app_id.plattform)
-	
+
+
+func _on_button_pressed() -> void:
+	GameManager.app_in_entwicklung.append(app_id)
+	print(GameManager.app_in_entwicklung)

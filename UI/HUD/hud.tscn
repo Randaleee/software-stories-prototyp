@@ -1,0 +1,71 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4fjn15hr4c7v"]
+
+[ext_resource type="Script" path="res://UI/HUD/hud.gd" id="1_bwiyk"]
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bwiyk")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+offset_right = 66.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/HBoxContainer"]
+layout_mode = 2
+text = "Konto:"
+
+[node name="Konto" type="Label" parent="MarginContainer/PanelContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="PanelContainer2" type="PanelContainer" parent="MarginContainer2"]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer2/PanelContainer2"]
+layout_mode = 2
+
+[node name="Tag" type="Label" parent="MarginContainer2/PanelContainer2/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Monat Name" type="Label" parent="MarginContainer2/PanelContainer2/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="MarginContainer2/PanelContainer2/HBoxContainer2"]
+layout_mode = 2
+
+[node name="Label4" type="Label" parent="MarginContainer2/PanelContainer2/HBoxContainer2"]
+layout_mode = 2
+
+[node name="Label5" type="Label" parent="MarginContainer2/PanelContainer2/HBoxContainer2"]
+layout_mode = 2
