@@ -7,7 +7,8 @@ var geld: int = 10000
 
 # Listen
 var angestellte_mitarbeiter: Array[Mitarbeiter] = []
-var aktives_projekt: Array[App] = []
+var verfügbare_apps: Array[App] = []
+var app_in_entwicklung: Array[App] = []
 var veröffentlichte_apps: Array[App] = []
 
 # Konstanten
@@ -32,3 +33,4 @@ func nächster_monat():
 		aktuelles_datum.monat = 1
 		aktuelles_datum.jahr += 1
 	monat_vergangen.emit()
+	

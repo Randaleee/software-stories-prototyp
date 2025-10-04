@@ -1,18 +1,18 @@
 [gd_resource type="Resource" script_class="App" load_steps=2 format=3 uid="uid://ch6epmtkkio2n"]
 
-[ext_resource type="Script" path="res://Data/Projekte/Apps.gd" id="1_i4w4l"]
+[ext_resource type="Script" path="res://Data/Templates/Apps.gd" id="1_i4w4l"]
 
 [resource]
 script = ExtResource("1_i4w4l")
 plattform = 2
-kategorie = 2
+kategorie = 0
 entwicklungszeit = 3
-app_name = ""
-schwerpunkt = 3
-schwierigkeit = 5
-"gewährte_erfahrung" = 0
-belohnung = 0
-design = 0
+app_name = "Taschenlampen App"
+schwerpunkt = 0
+schwierigkeit = 1
+"gewährte_erfahrung" = 150
+belohnung = 2500
+design = 1
 performance = 0
 innovation = 0
 "qualität" = 0

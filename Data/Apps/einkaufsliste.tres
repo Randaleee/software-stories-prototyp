@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="App" load_steps=2 format=3 uid="uid://bpn3wyvfmgc3m"]
+
+[ext_resource type="Script" path="res://Data/Templates/Apps.gd" id="1_wwm63"]
+
+[resource]
+script = ExtResource("1_wwm63")
+plattform = 0
+kategorie = 3
+entwicklungszeit = 3
+app_name = "Einkaufsliste"
+schwerpunkt = 0
+schwierigkeit = 0
+"gewährte_erfahrung" = 180
+belohnung = 0
+design = 0
+performance = 0
+innovation = 0
+"qualität" = 0

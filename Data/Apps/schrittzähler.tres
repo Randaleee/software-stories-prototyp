@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="App" load_steps=2 format=3 uid="uid://mbibiqnw5jlx"]
+
+[ext_resource type="Script" path="res://Data/Templates/Apps.gd" id="1_6kimp"]
+
+[resource]
+script = ExtResource("1_6kimp")
+plattform = 0
+kategorie = 4
+entwicklungszeit = 6
+app_name = "Schrittzähler"
+schwerpunkt = 3
+schwierigkeit = 0
+"gewährte_erfahrung" = 0
+belohnung = 0
+design = 0
+performance = 0
+innovation = 0
+"qualität" = 0
