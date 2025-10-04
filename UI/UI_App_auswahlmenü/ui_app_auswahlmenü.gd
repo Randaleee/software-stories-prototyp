@@ -1,5 +1,6 @@
 extends Control
 
+@onready var app_container = %"App Conatainer"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -11,9 +12,10 @@ func _process(delta: float) -> void:
 	pass
 
 func zeige_apps_zur_auswahl():
-	var app = load("res://UI/app_ui/app_ui.tscn")
+	var app_ui_scene = preload("res://UI/app_ui/app_ui.tscn")
 	
-	for eintrag in "res://Data/Apps/":
-		app.new
-		add_child(app)
+	for app in GameManager.verfügbare_apps:
+		var app_ui_instance = app_ui_scene.instantiate()
+		app_ui_instance.app_id = app
+		app_container.add_child(app_ui_instance)
 		

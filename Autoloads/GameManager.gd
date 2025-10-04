@@ -21,6 +21,15 @@ signal app_fertiggestellt(app: App)
 signal geld_geändert
 
 func _ready():
+	starte_ingame_zeit()
+	verfügbare_apps.append(load("res://Data/Apps/einkaufsliste.tres"))
+	verfügbare_apps.append(load("res://Data/Apps/schrittzähler.tres"))
+	verfügbare_apps.append(load("res://Data/Apps/taschenlampe.tres"))
+	print(verfügbare_apps)
+	
+
+# Zeitmanagement
+func starte_ingame_zeit():
 	var timer = Timer.new()
 	add_child(timer)
 	timer.wait_time = 2.0

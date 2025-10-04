@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b203qk1e4s7dn"]
 
-[ext_resource type="Script" path="res://UI/app_ui/UI_App_auswahlmenü/ui_app_auswahlmenü.gd" id="1_bl7bb"]
+[ext_resource type="Script" path="res://UI/UI_App_auswahlmenü/ui_app_auswahlmenü.gd" id="1_bl7bb"]
 
 [node name="App Auswahlmenü" type="Control"]
 layout_mode = 3
@@ -49,5 +49,6 @@ layout_mode = 2
 [node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer"]
+[node name="App Conatainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer"]
+unique_name_in_owner = true
 layout_mode = 2
