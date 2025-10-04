@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2n71i24km6bi"]
+
+[ext_resource type="Script" path="res://UI/UI Ingame Menü/ingame_menü.gd" id="1_q1hni"]
+
+[node name="Ingame Menü" type="Control"]
+layout_mode = 3
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+grow_vertical = 2
+size_flags_vertical = 3
+script = ExtResource("1_q1hni")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Neue App" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Neue App"
+
+[node name="Mitarbeiter" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Mitarbeiter"
+
+[node name="Optionen" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Optionen"
+
+[node name="Beenden" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Beenden"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Neue App" to="." method="_on_neue_app_pressed"]
