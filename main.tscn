@@ -22,4 +22,3 @@ unique_name_in_owner = true
 
 [node name="App Auswahlmenü" parent="CanvasLayer" instance=ExtResource("4_hcqdn")]
 unique_name_in_owner = true
-visible = false

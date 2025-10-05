@@ -7,10 +7,6 @@ func _ready() -> void:
 	zeige_apps_zur_auswahl()
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
 func zeige_apps_zur_auswahl():
 	var app_ui_scene = preload("res://UI/app_ui/app_ui.tscn")
 	

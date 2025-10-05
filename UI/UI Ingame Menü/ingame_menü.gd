@@ -2,4 +2,5 @@ extends Control
 
 
 func _on_neue_app_pressed() -> void:
-	GameManager.button_neue_app_pressed.emit()
+	UIManager.show_menu("app_auswahlmenü")
+	print("Neue App Button gedrückt")
