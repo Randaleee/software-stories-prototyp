@@ -17,5 +17,6 @@ func aktualisiere_ui():
 
 
 func _on_button_pressed() -> void:
-	GameManager.app_in_entwicklung.append(app_id)
+	GameManager.app_in_entwicklung = app_id
+	UIManager.show_menu("ui_app_in_entwicklung")
 	print(GameManager.app_in_entwicklung)

@@ -7,8 +7,8 @@ var geld: int = 10000
 
 # Listen
 var angestellte_mitarbeiter: Array[Mitarbeiter] = []
+var app_in_entwicklung: App = null
 var verfügbare_apps: Array[App] = []
-var app_in_entwicklung: Array[App] = []
 var veröffentlichte_apps: Array[App] = []
 
 # Konstanten
@@ -20,7 +20,7 @@ signal monat_vergangen
 signal app_fertiggestellt(app: App)
 signal geld_geändert
 
-signal button_neue_app_pressed
+
 
 
 func _ready():
@@ -46,3 +46,11 @@ func nächster_monat():
 		aktuelles_datum.jahr += 1
 	monat_vergangen.emit()
 	
+func starte_app_entwicklung(app: App):
+	if app_in_entwicklung != null:
+		print("Es läuft bereits ein Projekt!")
+	app_in_entwicklung = app
+
+func kalkuliere_fortschritt():
+	"app_in_entwicklung.fortschritt = / vergangene_zeit / app_in_entwicklung.entwicklungszeit"
+	pass

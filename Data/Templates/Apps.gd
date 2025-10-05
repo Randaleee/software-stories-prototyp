@@ -2,10 +2,11 @@ class_name App
 extends Resource
 
 @export_group("Spielerentscheidung")
+@export var app_name: String
 @export var plattform: Plattform
 @export var kategorie: Kategorie
 @export var entwicklungszeit: int
-@export var app_name: String
+@export var fortschritt: int = 0
 @export var schwerpunkt: Schwerpunkt
 
 @export_group("Eigenschaften")
@@ -14,9 +15,9 @@ extends Resource
 @export var belohnung: int # Geldeinheit
 
 @export_group("Attribute")
+@export_range(1, 200) var innovation: int
 @export_range(1, 200) var design: int
 @export_range(1, 200) var performance: int
-@export_range(1, 200) var innovation: int
 @export_range(1, 200) var qualität: int
 
 enum Schwerpunkt {

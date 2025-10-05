@@ -4,15 +4,16 @@
 
 [resource]
 script = ExtResource("1_wwm63")
+app_name = ""
 plattform = 0
 kategorie = 3
 entwicklungszeit = 3
-app_name = "Einkaufsliste"
+fortschritt = 0
 schwerpunkt = 0
 schwierigkeit = 0
 "gewährte_erfahrung" = 180
 belohnung = 0
+innovation = 0
 design = 0
 performance = 0
-innovation = 0
 "qualität" = 0
