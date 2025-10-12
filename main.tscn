@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://ca45pm44s7oaa"]
+[gd_scene load_steps=7 format=3 uid="uid://ca45pm44s7oaa"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_pf6qg"]
 [ext_resource type="PackedScene" uid="uid://d2n71i24km6bi" path="res://UI/UI Ingame Menü/ingame_menü.tscn" id="2_jjl0w"]
 [ext_resource type="PackedScene" uid="uid://c4fjn15hr4c7v" path="res://UI/HUD/hud.tscn" id="3_gpyb0"]
 [ext_resource type="PackedScene" uid="uid://b203qk1e4s7dn" path="res://UI/UI_App_auswahlmenü/UI_app_auswahlmenü.tscn" id="4_hcqdn"]
 [ext_resource type="PackedScene" uid="uid://dmiav8225ssvv" path="res://UI/UI App in Entwicklung/ui_app_in_entwicklung.tscn" id="5_t6853"]
+[ext_resource type="PackedScene" uid="uid://3lohf70o8g36" path="res://UI/UI App beendet/ui_app_beendet.tscn" id="6_6ocyi"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -25,4 +26,7 @@ script = ExtResource("1_pf6qg")
 visible = false
 
 [node name="UI App in Entwicklung" parent="CanvasLayer" instance=ExtResource("5_t6853")]
+visible = false
+
+[node name="UI App beendet" parent="CanvasLayer" instance=ExtResource("6_6ocyi")]
 visible = false

@@ -15,12 +15,11 @@ extends Resource
 
 # Fähigkeiten
 @export_group("Attribute")
-@export_range(1, 10) var teamwork: int = 0 # Profitiert von anderen Teammitgliedern
-@export_range(1, 10) var führung: int = 0 # Gibt Teammitgliedern Bonus
-@export_range(1, 10) var kreativität: int = 0
-@export_range(1, 10) var analytik: int = 0
-@export_range(1, 10) var akribie: int = 0
-@export_range(1, 10) var loyalität: int = 0
+@export_range(1, 10) var ästhetik: int = 0 # Gibt Teammitgliedern Bonus
+@export_range(1, 10) var kreativität: int = 0 # erhöht Innovation
+@export_range(1, 10) var analytik: int = 0 # erhöht Performance
+@export_range(1, 10) var akribie: int = 0 # erhöht Qualität
+
 
 signal _leveled_up
 signal _added_experience

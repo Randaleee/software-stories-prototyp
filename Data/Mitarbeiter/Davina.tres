@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Mitarbeiter" load_steps=2 format=3 uid="uid://1rkv2s18ihg3"]
+
+[ext_resource type="Script" path="res://Data/Templates/Mitarbeiter.gd" id="1_oalwa"]
+
+[resource]
+script = ExtResource("1_oalwa")
+mitarbeiter_name = "Davina"
+"persönlichkeit" = 0
+level = 1
+erfahrung = 0
+freie_attributpunkte = 0
+sternzeichen = 0
+status = 0
+gehalt = 0
+"ästhetik" = 3
+"kreativität" = 3
+analytik = 3
+akribie = 3

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Mitarbeiter" load_steps=2 format=3 uid="uid://cvfjfhxi25ryn"]
+
+[ext_resource type="Script" path="res://Data/Templates/Mitarbeiter.gd" id="1_rcdp6"]
+
+[resource]
+script = ExtResource("1_rcdp6")
+mitarbeiter_name = "Jörg"
+"persönlichkeit" = 0
+level = 1
+erfahrung = 0
+freie_attributpunkte = 0
+sternzeichen = 0
+status = 0
+gehalt = 0
+"ästhetik" = 4
+"kreativität" = 4
+analytik = 4
+akribie = 4

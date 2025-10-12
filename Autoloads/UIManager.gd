@@ -5,8 +5,7 @@ var current_menu: Control = null # Wird genutzt um immer nur ein offenes Menü z
 @onready var ingame_menü: Control
 @onready var app_auswahlmenü: Control
 @onready var ui_app_in_entwicklung: Control
-
-
+@onready var ui_app_beendet: Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -18,6 +17,7 @@ func setup(main_node: Control):
 	ingame_menü = canvas.get_node("Ingame Menü")
 	app_auswahlmenü = canvas.get_node("App Auswahlmenü")
 	ui_app_in_entwicklung = canvas.get_node("UI App in Entwicklung")
+	ui_app_beendet = canvas.get_node("UI App beendet")
 
 func show_menu(menu_name: String) -> void:
 	if current_menu:
@@ -28,6 +28,8 @@ func show_menu(menu_name: String) -> void:
 			current_menu = app_auswahlmenü
 		"ui_app_in_entwicklung":
 			current_menu = ui_app_in_entwicklung
+		"UI App beendet":
+			current_menu = ui_app_beendet
 			
 	if current_menu:
 		if current_menu.has_method("update_ui"):

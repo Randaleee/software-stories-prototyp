@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Mitarbeiter" load_steps=2 format=3 uid="uid://bmlhcg7t13aqq"]
+
+[ext_resource type="Script" path="res://Data/Templates/Mitarbeiter.gd" id="1_4ieqc"]
+
+[resource]
+script = ExtResource("1_4ieqc")
+mitarbeiter_name = "Rambo Ramon Rainer"
+"persönlichkeit" = 0
+level = 1
+erfahrung = 0
+freie_attributpunkte = 0
+sternzeichen = 0
+status = 0
+gehalt = 0
+"ästhetik" = 0
+"kreativität" = 0
+analytik = 0
+akribie = 0
