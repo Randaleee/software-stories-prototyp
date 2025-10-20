@@ -30,6 +30,14 @@ text = "Neue App"
 layout_mode = 2
 text = "Mitarbeiter"
 
+[node name="Speichern" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Speichern"
+
+[node name="Spiel laden" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Spiel laden"
+
 [node name="Optionen" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Optionen"
@@ -39,3 +47,5 @@ layout_mode = 2
 text = "Beenden"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Neue App" to="." method="_on_neue_app_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Speichern" to="." method="_on_speichern_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Spiel laden" to="." method="_on_spiel_laden_pressed"]

@@ -36,6 +36,31 @@ func _ready():
 	monat_vergangen.connect(entwickle_app)
 	app_fertiggestellt.connect(on_app_fertiggestellt)
 
+
+func save_game():
+	var saved_game:SavedGame = SavedGame.new()
+	
+	saved_game.aktuelles_datum = aktuelles_datum
+	saved_game.angestellte_mitarbeiter = angestellte_mitarbeiter
+	saved_game.app_in_entwicklung = app_in_entwicklung
+	saved_game.geld = geld
+	saved_game.monate_vergangen_seit_projektstart = monate_vergangen_seit_projektstart
+	saved_game.verfügbare_apps = verfügbare_apps
+	saved_game.veröffentlichte_apps = veröffentlichte_apps
+
+	ResourceSaver.save(saved_game, "user://savegame.tres")
+
+func load_game():
+	var saved_game:SavedGame = load("user://savegame.tres")
+	
+	aktuelles_datum = saved_game.aktuelles_datum
+	angestellte_mitarbeiter = saved_game.angestellte_mitarbeiter
+	app_in_entwicklung = saved_game.app_in_entwicklung
+	geld = saved_game.geld
+	monate_vergangen_seit_projektstart = saved_game.monate_vergangen_seit_projektstart
+	verfügbare_apps = saved_game.verfügbare_apps
+	veröffentlichte_apps = saved_game.veröffentlichte_apps
+
 # Zeitmanagement
 func starte_ingame_zeit():
 	var timer = Timer.new()
