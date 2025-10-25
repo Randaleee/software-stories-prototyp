@@ -9,10 +9,12 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	GameManager.connect("monat_vergangen", update_ui)
+	GameManager.monat_vergangen.connect(update_ui)
+	GameManager.spiel_geladen.connect(update_ui)
 	
 func update_ui():
 	if GameManager.app_in_entwicklung != null:
+		UIManager.ui_app_in_entwicklung.show()
 		app_name.text = GameManager.app_in_entwicklung.app_name
 		wert_innovation.text = str(GameManager.app_in_entwicklung.innovation)
 		wert_design.text = str(GameManager.app_in_entwicklung.design)

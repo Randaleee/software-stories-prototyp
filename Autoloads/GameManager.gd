@@ -20,7 +20,7 @@ const MONATE = ["Januar", "Februar", "März", "April", "Mai", "Juni",
 signal monat_vergangen
 signal app_fertiggestellt(app: App)
 signal geld_geändert
-
+signal spiel_geladen
 
 
 
@@ -47,6 +47,10 @@ func save_game():
 	saved_game.monate_vergangen_seit_projektstart = monate_vergangen_seit_projektstart
 	saved_game.verfügbare_apps = verfügbare_apps
 	saved_game.veröffentlichte_apps = veröffentlichte_apps
+	saved_game.design = app_in_entwicklung.design 
+	saved_game.innovation = app_in_entwicklung.innovation
+	saved_game.performance = app_in_entwicklung.performance
+	saved_game.qualität = app_in_entwicklung.qualität
 
 	ResourceSaver.save(saved_game, "user://savegame.tres")
 
@@ -60,6 +64,12 @@ func load_game():
 	monate_vergangen_seit_projektstart = saved_game.monate_vergangen_seit_projektstart
 	verfügbare_apps = saved_game.verfügbare_apps
 	veröffentlichte_apps = saved_game.veröffentlichte_apps
+	saved_game.design = app_in_entwicklung.design 
+	saved_game.innovation = app_in_entwicklung.innovation
+	saved_game.performance = app_in_entwicklung.performance
+	saved_game.qualität = app_in_entwicklung.qualität
+	
+	spiel_geladen.emit()
 
 # Zeitmanagement
 func starte_ingame_zeit():
@@ -90,6 +100,7 @@ func entwickle_app():
 		berechne_monate_vergangen_seit_projektstart()
 		kalkuliere_fortschritt()
 		berechne_app_attribute()
+
 		if monate_vergangen_seit_projektstart == app_in_entwicklung.entwicklungszeit:
 			app_fertiggestellt.emit()
 		return
