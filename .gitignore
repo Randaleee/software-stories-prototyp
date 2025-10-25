@@ -27,6 +27,7 @@ mono_crash.*.json
 *.apk
 *.aab
 *.ipa
+*.png
 
 # Logs and temporary files
 *.log
