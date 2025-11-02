@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://byu7cfrdsi8gf"]
+
+[ext_resource type="Texture2D" uid="uid://djt62igqm7rcc" path="res://Assets/Symbole/UI_thinking_emotes_animation_48x48.png" id="1_kkk5r"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ehfqd"]
+radius = 18.2483
+
+[node name="Ausrufezeichen" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_kkk5r")
+region_enabled = true
+region_rect = Rect2(0, 190.364, 47.3637, 51.4214)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ehfqd")

@@ -30,5 +30,3 @@ visible = false
 
 [node name="UI App beendet" parent="CanvasLayer" instance=ExtResource("6_6ocyi")]
 visible = false
-
-[node name="TileMapLayer" type="TileMapLayer" parent="."]

@@ -1,0 +1,69 @@
+[gd_scene load_steps=11 format=3 uid="uid://byff65tkfcpqd"]
+
+[ext_resource type="Texture2D" uid="uid://ciddb0l5xdtm4" path="res://Assets/Characters/Adam_idle_anim_16x16.png" id="1_qoap7"]
+[ext_resource type="Script" path="res://Sprites/adam.gd" id="1_syita"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xxrsi"]
+atlas = ExtResource("1_qoap7")
+region = Rect2(288, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mstqg"]
+atlas = ExtResource("1_qoap7")
+region = Rect2(304, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3op67"]
+atlas = ExtResource("1_qoap7")
+region = Rect2(320, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b3lmq"]
+atlas = ExtResource("1_qoap7")
+region = Rect2(336, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_05ka1"]
+atlas = ExtResource("1_qoap7")
+region = Rect2(352, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ojy58"]
+atlas = ExtResource("1_qoap7")
+region = Rect2(368, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_agql7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xxrsi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mstqg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3op67")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b3lmq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_05ka1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ojy58")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n22jp"]
+
+[node name="Adam" type="CharacterBody2D"]
+collision_mask = 2
+script = ExtResource("1_syita")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_agql7")
+autoplay = "default"
+frame_progress = 0.858995
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 6)
+shape = SubResource("CircleShape2D_n22jp")
