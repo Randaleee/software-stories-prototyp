@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-@export var attribut_gesamtzahl:float = -500.0
+@export var attribut_gesamtzahl:float = -700.0
 var gravity = 200.0
 var max_height_reached = false
 var flight_completed = false
@@ -23,7 +23,10 @@ func pause_at_peak():
 	set_physics_process(false)
 	velocity.y = 0
 
-	
+func apply_boost(amount):
+	velocity.y += amount
+	print("Geschwindigkeit um" + amount + "erhöht!")
+
 func start_flight():
 	flight_started = true
 	velocity.y = attribut_gesamtzahl

@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=4 uid="uid://cjgw0fqdalia8"]
+[gd_scene load_steps=6 format=4 uid="uid://cjgw0fqdalia8"]
 
 [ext_resource type="PackedScene" uid="uid://byff65tkfcpqd" path="res://Sprites/adam.tscn" id="1_4yej2"]
 [ext_resource type="Texture2D" uid="uid://73w1ig8nkcec" path="res://scrolling.png" id="2_h0517"]
+[ext_resource type="PackedScene" uid="uid://byu7cfrdsi8gf" path="res://Sprites/Ausrufezeichen.tscn" id="3_ytgoi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_43pj3"]
 texture = ExtResource("2_h0517")
@@ -796,3 +797,6 @@ tile_set = SubResource("TileSet_no4jj")
 [node name="Adam" parent="." instance=ExtResource("1_4yej2")]
 
 [node name="Camera2D" type="Camera2D" parent="Adam"]
+
+[node name="Ausrufezeichen" parent="." instance=ExtResource("3_ytgoi")]
+position = Vector2(7, -1138)
